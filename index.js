@@ -8,7 +8,7 @@ server.use(bodyParser.json());
 
 server.listen(process.env.PORT || 3000);
 
-const employees = []; //[{fName: "Matt", lName: "Sugu", email: "matt.s@amazon.com", role: "sde", eId: "123432"}]
+const employees = [{"fName": "Matt", "lName": "Sugu", "email": "matt.s@amazon.com", "role": "sde", "eId": "123432"}]; //[{fName: "Matt", lName: "Sugu", email: "matt.s@amazon.com", role: "sde", eId: "123432"}]
 
 server.post("/employees", (req, res) => {
   employees.push(req.body);
